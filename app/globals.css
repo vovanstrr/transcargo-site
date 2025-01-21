@@ -40,3 +40,16 @@ a {
     color-scheme: dark;
   }
 }
+
+header a {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+header {
+  background: url('/h_texture_2.jpg'); 
+  color:#ffffff;
+  position: absolute;
+  width: 100%;
+  height: 401px;
+}
