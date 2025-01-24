@@ -2,7 +2,8 @@ import styles from "./page-about.css"
 
 export const metadata = {
     title: 'О нашей компании',
-    description: 'about page'
+    description: 'about page',
+    keywords: 'О компании Transcargo'
 }
 
 function about() {
