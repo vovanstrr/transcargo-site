@@ -32,3 +32,13 @@
     display: flex;
     gap: 24px;
 }
+
+.menu > li {
+    margin: 0;
+    background-color: white;
+    list-style-type: none;
+  }
+
+  .menu > li:hover {
+    background-color: lightgray;
+  }

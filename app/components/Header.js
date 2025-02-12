@@ -1,17 +1,23 @@
 'use client'
-
+import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import "./header.css"
 
 const Header = () => {
+    const [open, setOpen] = useState(false)
 
-    const menu = (e) => {
-        console.log('menu ', e);
-                
+    const menuClose = (e) => {
+        setOpen(false)
+        console.log('menu close ', e);
+
     }
-    const menuHidden = (e) => {
-        console.log('menuHidden ', e);
+    const menuOpen = (e) => {
+        console.log('menu open ', e);
+        setOpen(true)
+    }
+    const handleMenuOne = () =>{
+        console.log('handleMenuOne');
     }
     // onMouseMove={menu}
     return (
@@ -30,7 +36,17 @@ const Header = () => {
                     </div>
 
                     <nav className="header__nav">
-                        <Link href='/about' className="header__link" onMouseOver={menu} onMouseOut={menuHidden}>ABOUT US</Link>
+                    <Link href='/about' className="header__link" onMouseOver={menuOpen} onMouseOut={menuClose}>ABOUT US</Link>
+                        {open ? (<div><ul className="menu">
+                            <li className="menu-item">
+                                <button onClick={handleMenuOne} onMouseOver={menuOpen}>Menu 1</button>
+                            </li>
+                            <li className="menu-item">
+                                <button>Menu 2</button>
+                            </li>
+                        </ul>
+                        </div>) : null}
+                        
                         <Image src="/top_menu_razd.png" alt="razdelitel" width={2} height={24} />
                         <Link href='/fleet' className="header__link">FLEET</Link>
                         <Image src="/top_menu_razd.png" alt="razdelitel" width={2} height={24} />
