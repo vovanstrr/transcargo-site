@@ -16,8 +16,8 @@ const Header = () => {
         console.log('menu open ', e);
         setOpen(true)
     }
-    const handleMenuOne = () =>{
-        console.log('handleMenuOne');
+    const handleMenuOne = (e) =>{
+        console.log('handleMenuOne ', e.target.childNodes[0].textContent);
     }
     // onMouseMove={menu}
     return (
@@ -37,12 +37,14 @@ const Header = () => {
 
                     <nav className="header__nav">
                     <Link href='/about' className="header__link" onMouseOver={menuOpen} onMouseOut={menuClose}>ABOUT US</Link>
+
+                        {/* --------------Hidden menu-------------- */}
                         {open ? (<div><ul className="menu">
                             <li className="menu-item">
-                                <button onClick={handleMenuOne} onMouseOver={menuOpen}>Menu 1</button>
+                                <button onClick={handleMenuOne} onMouseOver={menuOpen} onMouseOut={menuClose}>Menu 1</button>
                             </li>
                             <li className="menu-item">
-                                <button>Menu 2</button>
+                                <button onClick={handleMenuOne} onMouseOver={menuOpen} onMouseOut={menuClose}>Menu 2</button>
                             </li>
                         </ul>
                         </div>) : null}
