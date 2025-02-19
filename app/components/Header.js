@@ -16,7 +16,7 @@ const Header = () => {
         console.log('menu open ', e);
         setOpen(true)
     }
-    const handleMenuOne = (e) =>{
+    const handleMenuOne = (e) => {
         console.log('handleMenuOne ', e.target.childNodes[0].textContent);
     }
     // onMouseMove={menu}
@@ -36,10 +36,23 @@ const Header = () => {
                     </div>
 
                     <nav className="header__nav">
-                    <Link href='/about' className="header__link" onMouseOver={menuOpen} onMouseOut={menuClose}>ABOUT US</Link>
+                        <ul>
+                            <li>
+                                <Link href='/about' className="header__link" onMouseOver={menuOpen} onMouseOut={menuClose}>ABOUT US</Link>
+                                <Image src="/top_menu_razd.png" alt="razdelitel" width={2} height={24} />
+                                <ul>
+                                    <li className="menu-item">
+                                        <button onClick={handleMenuOne} onMouseOver={menuOpen} onMouseOut={menuClose}>Menu 1</button>
+                                    </li>
+                                    <li className="menu-item">
+                                        <button onClick={handleMenuOne} onMouseOver={menuOpen} onMouseOut={menuClose}>Menu 2</button>
+                                    </li>
+                                </ul>
+                            </li>
 
-                        {/* --------------Hidden menu-------------- */}
-                        {open ? (<div><ul className="menu">
+
+                            {/* --------------Hidden menu-------------- */}
+                            {/* {open ? (<div className="nav__item"><ul className="menu">
                             <li className="menu-item">
                                 <button onClick={handleMenuOne} onMouseOver={menuOpen} onMouseOut={menuClose}>Menu 1</button>
                             </li>
@@ -47,19 +60,32 @@ const Header = () => {
                                 <button onClick={handleMenuOne} onMouseOver={menuOpen} onMouseOut={menuClose}>Menu 2</button>
                             </li>
                         </ul>
-                        </div>) : null}
-                        
-                        <Image src="/top_menu_razd.png" alt="razdelitel" width={2} height={24} />
-                        <Link href='/fleet' className="header__link">FLEET</Link>
-                        <Image src="/top_menu_razd.png" alt="razdelitel" width={2} height={24} />
-                        <Link href='/services' className="header__link">SERVICES</Link>
-                        <Image src="/top_menu_razd.png" alt="razdelitel" width={2} height={24} />
-                        <Link href='/news' className="header__link">NEWS</Link>
-                        <Image src="/top_menu_razd.png" alt="razdelitel" width={2} height={24} />
-                        <Link href='/gallery'>GALLERY</Link>
-                        <Image src="/top_menu_razd.png" alt="razdelitel" width={2} height={24} />
-                        <Link href='/contact'>CONTACT US</Link>
-                        {/* <Link href='/users'>Users test link</Link> */}
+                        </div>) : null} */}
+
+
+                            <li>
+                                <Link href='/fleet' className="header__link">FLEET</Link>
+                                <Image src="/top_menu_razd.png" alt="razdelitel" width={2} height={24} />
+                            </li>
+                            <li>
+                                <Link href='/services' className="header__link">SERVICES</Link>
+                                <Image src="/top_menu_razd.png" alt="razdelitel" width={2} height={24} />
+                            </li>
+                            <li>
+                                <Link href='/news' className="header__link">NEWS</Link>
+                                <Image src="/top_menu_razd.png" alt="razdelitel" width={2} height={24} />
+                            </li>
+                            <li>
+                                <Link href='/gallery' className="header__link">GALLERY</Link>
+                                <Image src="/top_menu_razd.png" alt="razdelitel" width={2} height={24} />
+                            </li>
+                            <li>
+                                <Link href='/contact' className="header__link">CONTACT US</Link>
+                            </li>
+
+
+                            {/* <Link href='/users'>Users test link</Link> */}
+                        </ul>
                     </nav>
                 </div>
 

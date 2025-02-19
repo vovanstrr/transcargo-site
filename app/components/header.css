@@ -42,3 +42,32 @@
   .menu > li:hover {
     background-color: lightgray;
   }
+
+  ul {
+    list-style-type:  none;
+  }
+
+  header div nav ul li {
+    position: relative;
+    float: left;
+  }
+  /* header div nav ul li Link {
+    padding: 15px;
+    color:bisque
+
+  } */
+
+  header div nav ul li ul {
+    position: absolute;
+    background: black;
+  }
+
+  .header__link {
+    padding: 15px;
+    /* color:bisque */
+    
+  }
+
+  .header__link:hover {
+    color: red
+  }
