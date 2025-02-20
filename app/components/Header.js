@@ -42,10 +42,15 @@ const Header = () => {
                                 <Image src="/top_menu_razd.png" alt="razdelitel" width={2} height={24} />
                                 <ul>
                                     <li className="menu-item">
-                                        <button onClick={handleMenuOne} onMouseOver={menuOpen} onMouseOut={menuClose}>Menu 1</button>
+                                        <Link href='/fleet' className="header__link">ABOUT OUR PARENT COMPANY</Link>
+                                        {/* <button onClick={handleMenuOne} onMouseOver={menuOpen} onMouseOut={menuClose}>Menu 1</button> */}
                                     </li>
                                     <li className="menu-item">
-                                        <button onClick={handleMenuOne} onMouseOver={menuOpen} onMouseOut={menuClose}>Menu 2</button>
+                                        <Link href='/news' className="header__link">OUR TEAM</Link>
+                                        {/* <button onClick={handleMenuOne} onMouseOver={menuOpen} onMouseOut={menuClose}>Menu 2</button> */}
+                                    </li>
+                                    <li className="menu-item">
+                                        <Link href='/news' className="header__link">SAFETY, SECURITY AND QUALITI</Link>
                                     </li>
                                 </ul>
                             </li>
@@ -70,6 +75,20 @@ const Header = () => {
                             <li>
                                 <Link href='/services' className="header__link">SERVICES</Link>
                                 <Image src="/top_menu_razd.png" alt="razdelitel" width={2} height={24} />
+                                <ul>
+                                    <li>
+                                        <Link href='/news' className="header__link">OFFSHORE TRANSSHIPMENT</Link>
+                                    </li>
+                                    <li>
+                                        <Link href='/news' className="header__link">OCEAN TOWAGE & SALVAGE</Link>
+                                    </li>
+                                    <li>
+                                        <Link href='/news' className="header__link">DIVING JOBS</Link>
+                                    </li>
+                                    <li>
+                                        <Link href='/news' className="header__link">SHIP TECHNICAL MANAGEMENT</Link>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
                                 <Link href='/news' className="header__link">NEWS</Link>
